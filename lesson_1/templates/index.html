@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+{% block content %}
+<div class='container overflow-hidden'>
+<h2>Boots</h2>
+<div class='row'>
+{% for item in _data_boots%}
+<div class='col-sm-4'>
+ <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/static/img/{{item.img_link}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Size</li>
+      <li class="list-group-item">Colour</li>
+      <li class="list-group-item">Price    {{item.price}} $</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Buy</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+<h2>Clots</h2>
+<div class='row'>
+{% for item in _data_clots%}
+<div class='col-sm-4'>
+ <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/static/img/{{item.img_link}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Size</li>
+      <li class="list-group-item">Colour</li>
+      <li class="list-group-item">Price    {{item.price}} $</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Buy</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+<h2>Jacket</h2>
+<div class='row'>
+{% for item in _data_jacket%}
+<div class='col-sm-4'>
+ <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/static/img/{{item.img_link}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Size</li>
+      <li class="list-group-item">Colour</li>
+      <li class="list-group-item">Price    {{item.price}} $</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Buy</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}
