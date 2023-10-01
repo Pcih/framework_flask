@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+{% block content %}
+<h1>Привет это мой первый сайт</h1>
+{% if request.cookies.get('username') %}
+    <p>Здраствуйте {{username}}</p>
+{% else  %}
+    <p>Попробуйте зарегистрироваться!</p>
+{% endif %}
+{% endblock %}
